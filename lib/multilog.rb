@@ -19,10 +19,9 @@ class MultiLog < Logger
 
   # Create a simple log object with one log level and one device
   # 
-  # May be called in the same manner as ruby's Logger class, 
-  # or with a list of logs specified in the same format as #configure_logs
+  # The 'logdevs' argument takes the same values as specified in #configure_logs
   #
-  def initialize(logdevs = {}, progname=nil, shift_age = 0, shift_size = 1048576)
+  def initialize(logdevs = {}, progname = nil, shift_age = 0, shift_size = 1048576)
     super(nil, shift_age, shift_size)
     @progname     = progname
     @shift_age    = shift_age
